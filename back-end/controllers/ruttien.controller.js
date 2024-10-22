@@ -36,13 +36,16 @@ class RutTienController {
     }).send(res);
   });
   static createRutTien = catchAsync(async (req, res, next) => {
-    const { _id: userId, money, taiKhoan, matKhauRutTien: matKhauRutTienUser } = req.user;
+    const { _id: userId, money, taiKhoan, matKhauRutTien: matKhauRutTienUser, tienCuoc } = req.user;
     const { soTien, nganHang, matKhauRutTien } = req.body;
     if (!soTien || !nganHang || !matKhauRutTien) {
       throw new UnauthorizedError("Vui lòng nhập đầy đủ thông tin");
     }
     if (!_.isNumber(soTien)) {
       throw new UnauthorizedError("Vui lòng nhập đầy đủ thông tin");
+    }
+    if (tienCuoc <= 0) {
+      throw new BadRequestError("Bạn cần đạt cược ít nhất 1 lần để rút tiền");
     }
     if (soTien < MIN_MONEY_WITHDRAW) {
       throw new UnauthorizedError("Số tiền rút tối thiểu phải là " + convertMoney(MIN_MONEY_WITHDRAW));
