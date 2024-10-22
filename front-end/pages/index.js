@@ -18,19 +18,7 @@ import XucXac3P from "@/public/assets/images/xucxac3p.png";
 import Image from "next/image";
 import "swiper/css";
 const LIST_GAME = [
-  {
-    title: "Xổ Số 3P",
-    desc: "Đoán bi để dành chiến thắng",
-    img: XoSo3P,
-    link: "/games/xoso3p",
-  },
-  {
-    title: "Xổ Số 5P",
-    desc: "Đoán bi để dành chiến thắng",
-    img: XoSo5P,
-    link: "/games/xoso5p",
-  },
-  {
+   {
     title: "Keno1P",
     desc: "Đoán số để dành chiến thắng",
     img: Keno1P,
@@ -47,6 +35,18 @@ const LIST_GAME = [
     desc: "Đoán số để dành chiến thắng",
     img: Keno5P,
     link: "/games/keno5p",
+  },
+  {
+    title: "Xổ Số 3P",
+    desc: "Đoán bi để dành chiến thắng",
+    img: XoSo3P,
+    link: "/games/xoso3p",
+  },
+  {
+    title: "Xổ Số 5P",
+    desc: "Đoán bi để dành chiến thắng",
+    img: XoSo5P,
+    link: "/games/xoso5p",
   },
   {
     title: "Xúc Xắc 1P",
