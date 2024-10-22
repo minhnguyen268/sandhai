@@ -45,7 +45,7 @@ class RutTienController {
       throw new UnauthorizedError("Vui lòng nhập đầy đủ thông tin");
     }
     if (tienCuoc <= 0) {
-      throw new BadRequestError("Bạn cần đạt cược ít nhất 1 lần để rút tiền");
+      throw new BadRequestError("Bạn cần hoàn thành ít nhất một vòng cược hợp lệ mới có thể rút tiền");
     }
     if (soTien < MIN_MONEY_WITHDRAW) {
       throw new UnauthorizedError("Số tiền rút tối thiểu phải là " + convertMoney(MIN_MONEY_WITHDRAW));
