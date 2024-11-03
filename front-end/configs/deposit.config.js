@@ -5,4 +5,4 @@ export const TINH_TRANG_DEPOSIT_HISTORY = {
   DA_HUY: "daHuy",
 };
 
-export const MIN_MONEY_DEPOSIT = 50$;
+export const MIN_MONEY_DEPOSIT = 50;
