@@ -35,7 +35,7 @@ const Home = () => {
         >
           {data && (
             <iframe
-              src={`https://${propertyId}.lc.chat/${widgetId}/`}
+              src={`https://${propertyId}.lc.chat/${widgetId}`}
               frameBorder="0"
               width="100%"
               height="100%"
